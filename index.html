@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>個人履歷</h1>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <a href="#about">關於我</a>
+        <a href="#skills">技能</a>
+        <a href="#experience">活動經歷</a>
+        <a href="#contact">聯絡我</a>
+    </div>
+</nav>
+
+<section id="about">
+    <div class="container1">
+        <div class="about-me-box">
+            <div class="about-me">
+                <h2>關於我</h2>
+                <p>姓名：李嘉欣<br>
+                    就讀學系：中原大學資訊管理學系<br>
+                    興趣：唱歌、跳舞<br>
+                    個性：樂觀<br>
+                    座右銘:先好好愛自己才有能力愛別人
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <div class="profile">
+        <div class="profile-picture">
+            <img src="img.jpg" alt="個人照片"></div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2>技能</h2>
+        <div class="skill-bars">
+            <div class="skill-bar" data-skill="Python">
+                <div class="skill-bar-title">Python</div>
+                <div class="skill-bar-progress">
+                    <div class="skill-bar-percent">0%</div>
+                </div>
+            </div>
+            <div class="skill-bar" data-skill="Java">
+                <div class="skill-bar-title">Java</div>
+                <div class="skill-bar-progress">
+                    <div class="skill-bar-percent">0%</div>
+                </div>
+            </div>
+            <div class="skill-bar" data-skill="CSS">
+                <div class="skill-bar-title">HTML/CSS</div>
+                <div class="skill-bar-progress">
+                    <div class="skill-bar-percent">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    //js動態百分比
+document.addEventListener("DOMContentLoaded", function() {
+    const skills = {
+        "Python": 50,
+        "Java": 60,
+        "CSS": 70
+    };
+
+    function updateSkillBars() {
+        Object.keys(skills).forEach(skill => {
+            const skillBar = document.querySelector(`.skill-bar[data-skill="${skill}"] .skill-bar-percent`);
+            skillBar.style.width = `${skills[skill]}%`;
+            skillBar.textContent = `${skills[skill]}%`;
+        });
+    }
+
+    function resetSkillBars() {
+        updateSkillBars(); 
+    }
+
+    updateSkillBars();
+
+   const skillBars = document.querySelectorAll('.skill-bar');
+    skillBars.forEach(skillBar => {
+    
+    });
+});
+</script>
+<section id="experience">
+    <div class="container">
+        <h2>活動經歷</h2>
+        <div class="experience-item">
+            <img src="img1.jpg" style="width:50%" class="experience-image">
+            <div class="experience-text">
+                <ul>
+                    <li><h1><b>資管之夜</b></h1>資管之夜是資管系上的活動，每班都安排了各種才藝表演，而我們班選擇
+                        了戲劇、唱歌和舞蹈的結合，為此我們花了整整一個多月的時間，每天晚上不
+                        辭辛苦地努力練習。
+                        戲劇的部分是我們班的特色之一。我們挑選了一個有趣的劇本「白雪公主
+                        病」，通過不斷的反覆排練和討論，將劇情演繹搞笑又生動。每一個人都投入
+                        了心力，這段期間的練習也加深了大家之間的默契。而唱歌和舞蹈的部分更是
+                        花了許多時間練習。在這中間我觀察到了每個人都很認真，想為整個表演增添
+                        更豐富的層次。在彼此的配合中，我們不斷地挑戰自己，力求呈現最完美的表
+                        演。
+                        這一個多月的努力，當我們走上舞台，看到觀眾的熱烈反應，所有的辛苦
+                        都好像不重要了。整個班級充滿向心力，大家在舞臺上展現出來的活力深深感
+                        染了在場的每一位觀眾。最終我們班居然榮獲第一名。這次活動不僅讓我們的
+                        班級更加凝聚，也讓每一位成員在共同奮鬥的過程中收穫了許多珍貴的回憶。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="experience">
+    <div class="container">
+        <div class="experience-item">
+            <div class="experience-text">
+                <ul>
+                    <li><h1><b>期末小成</b></h1>期末小成是這學期最後一個社團活動。在整個學期，我們嘻研社成員每天
+                        都投入在練舞的過程中，有時候甚至練到半夜。這其中的付出，不僅僅是對技
+                        巧的精進，更是對舞蹈的熱愛。每一個動作，每一個細節，都是我們多次重複
+                        琢磨的結果。這段練習的日子，雖然辛苦，但同時也是充滿激情和成就感的。 
+                        期末小成給大家一個展現自己的平台。這次表演不僅僅是展現技巧，更是
+                        把嘻研社的文化傳遞給大家。在排練的過程中，我們互相扶持、共同進步，這
+                        讓我們的社團更像一個大家庭。在彼此的努力中，我們攜手度過了這段充實的
+                        時光。 
+                        當觀眾在台下給予熱烈的掌聲時，那種成就感真的難以言喻。這學期的舞
+                        社之旅，雖然花了很多時間和精力，但每一刻的努力都是值得的。希望未來還
+                        有更多的機會，繼續在舞台上綻放屬於嘻研社的熱情和光芒。</li>
+                </ul>
+            </div>
+            <img src="img2.jpg" style="width:50%" class="experience-image">
+            
+        </div>
+    </div>
+</section>
+<div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/JHUQfbl6u-I?si=MiekmKlx4oS30t6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+ <li class="experience-text1">期末小成表演影片</li>
+   
+
+
+
+
+<section id="contact">
+    <div class="container">
+        <h2>聯絡我</h2>
+        <p>你可以通過以下方式聯絡我：</p>
+        <ul>
+            <li>Gmail: <a href="mailto:aa0983037667@gmail.com">aa983037667@gmail.com</a></li>
+            <li>電話: <a href="tel:0983037667">0983037667</a></li>
+            <a href="https://www.instagram.com/?hl=zh-tw"><img src="ig-logo.jpg" alt="IG"></a>
+            <a href="https://www.facebook.com/profile.php?id=100043880512779"><img src="fb.png" alt="IG"></a>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>版權所有 &copy; 2024 - 我的個人網站</p>
+    </div>
+</footer>
+
+</body>
+</html>
